@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import styled from 'styled-components'
 import './App.css'
+import { StyledBtn } from './components/Btn'
+import { myTheme } from './styles/Theme.styled'
+import myImage from './assets/ho.jpg'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <Box>
+        <BoxDiv>
+          <MyImg src={myImage}/>
+        </BoxDiv>
+        <BoxDiv>
+          <Hone>Headline</Hone>
+        </BoxDiv>
+        <BoxDiv>
+          <Par>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</Par>
+        </BoxDiv>
+        <BoxDiv>
+          <StyledBtn color={myTheme.colors.primary} primary>See more</StyledBtn>
+          <StyledBtn color={myTheme.colors.primary} outlined>Save</StyledBtn>
+        </BoxDiv>
+      </Box>
+      
+    </div>
   )
 }
 
 export default App
+
+const Box = styled.div`
+  height: 350px;
+  width: 300px;
+  display: flex;
+  justify-content: baseline;
+  align-items: start;
+  flex-direction: column;
+  column-gap: normal;
+  background-color: #fff;
+  border-radius: 15px;
+`
+
+const BoxDiv = styled.div`
+  padding: 10px;
+  display: flex;
+  justify-content: baseline;
+  align-items: start;
+`
+
+const Par =styled.p`
+  font-size: 12px;
+  color: #ABB3BA;
+`
+
+const Hone = styled.h1`
+  text-align: start;
+  font-size: 16px;
+`
+
+const MyImg = styled.img`
+  width: 280px;
+  height: 170px;
+  border-radius: 10px;
+`
