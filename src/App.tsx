@@ -53,11 +53,13 @@ const BoxDiv = styled.div`
 const Par =styled.p`
   font-size: 12px;
   color: #ABB3BA;
+  padding-left: 10px;
 `
 
 const Hone = styled.h1`
   text-align: start;
   font-size: 16px;
+  padding-left: 10px;
 `
 
 const MyImg = styled.img`

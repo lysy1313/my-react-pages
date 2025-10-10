@@ -16,6 +16,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType> `
   color: #fff;
   font-size: ${props => props.fontSize || "10px"};
   border-radius: 5px;
+  font-weight: lighter;
   
   &:hover{
     background-color: #22bee6;
@@ -36,5 +37,6 @@ export const StyledBtn = styled.button<StyledBtnPropsType> `
   ${props => props.primary && css<StyledBtnPropsType>`
     background-color: ${props => props.color || "#4053cc"};
     color: snow;
+    margin-left: 10px;
   `}
 `
